@@ -1,0 +1,91 @@
+$pink: #FF9FC3;
+$pink2: #FFC3D9;
+$pink3: #FFF1F1;
+$grey: #6B6B6B;
+
+body {
+  background: $pink;
+}
+
+.circle {
+  background-color: $pink2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  .head {
+    width: 220px;
+    height: 600px;
+    background: white;
+    margin-top: 80px;
+    margin-left: 40px;
+    border-top-left-radius: 45% 20%;
+    border-top-right-radius: 45% 20%;
+    z-index: 2;
+    position: absolute;
+  }
+  .eyes {
+    position: absolute;
+    z-index: 3;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: $grey;
+      border-radius: 100%;
+      margin: 0 25px;
+    }
+  }
+  .ears {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: $pink3;
+      border-radius: 100%;
+      margin: 0 40px;
+      border: 15px solid white;
+    }
+    z-index: 1;
+    position: absolute;
+  }
+  .mouth {
+    position: absolute;
+    z-index: 3;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 70px;
+    height: 40px;
+    background: $pink3;
+    border-radius: 100%;
+  }
+  .nose {
+    position: absolute;
+    z-index: 3;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 20px;
+    height: 10px;
+    background: $grey;
+    border-radius: 100%;
+  }
+}
